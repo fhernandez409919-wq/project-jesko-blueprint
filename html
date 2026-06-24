@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Jesko: The Blueprint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- STICKY HEADER & NAVBAR -->
+    <header class="navbar">
+        <div class="logo">JESKO // <span>BLUEPRINT</span></div>
+        <nav>
+            <a href="#hero" class="nav-link active">Home</a>
+            <a href="#strategy" class="nav-link">3-Year Strategy</a>
+            <a href="#ecosystem" class="nav-link">Ecosystem</a>
+            <a href="#logs" class="nav-link">Progress Logs</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="fullscreen-section">
+        <div class="hero-content">
+            <h1>PROJECT JESKO</h1>
+            <p class="subtitle">A scalable business ecosystem to fund a multi-million dollar hypercar garage.</p>
+            <a href="#strategy" class="cta-button">Explore Blueprint</a>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE STRATEGY TABS SECTION -->
+    <section id="strategy" class="content-section">
+        <h2 class="section-title">Phase 1: High School Core Skills</h2>
+        <p class="section-intro">Mastering the foundation over the next 3 years.</p>
+        
+        <div class="tab-container">
+            <div class="tab-menu">
+                <button class="tab-btn active" onclick="switchTab(event, 'design')">Design Pillar</button>
+                <button class="tab-btn" onclick="switchTab(event, 'code')">Code Pillar</button>
+                <button class="tab-btn" onclick="switchTab(event, 'growth')">Growth Pillar</button>
+            </div>
+            
+            <div id="design" class="tab-content active">
+                <h3>UI/UX Layouts & Wireframing</h3>
+                <p>Learning user experience frameworks and complex component structures using Figma.</p>
+                <span class="status-badge">In Progress</span>
+            </div>
+            <div id="code" class="tab-content">
+                <h3>Frontend Web Development</h3>
+                <p>Mastering structural HTML, aesthetic CSS animations, and complex DOM-manipulating JavaScript.</p>
+                <span class="status-badge">Active</span>
+            </div>
+            <div id="growth" class="tab-content">
+                <h3>Organic Marketing & SEO</h3>
+                <p>Understanding content generation, search engine optimization algorithms, and digital business leverage.</p>
+                <span class="status-badge">Upcoming</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLICKABLE ECOSYSTEM CARDS SECTION -->
+    <section id="ecosystem" class="content-section alternate-bg">
+        <h2 class="section-title">The Business Ecosystem</h2>
+        <div class="grid-container">
+            <div class="card" onclick="openModal('digital-modal')">
+                <div class="card-icon">💻</div>
+                <h3>1. Digital Tier</h3>
+                <p>Software solutions, agency offers, and content ecosystems. Click to inspect.</p>
+            </div>
+            <div class="card" onclick="openModal('physical-modal')">
+                <div class="card-icon">📦</div>
+                <h3>2. Physical Tier</h3>
+                <p>E-commerce, supply chains, and consumer goods distribution. Click to inspect.</p>
+            </div>
+            <div class="card" onclick="openModal('realestate-modal')">
+                <div class="card-icon">🏢</div>
+                <h3>3. Real Estate Tier</h3>
+                <p>Commercial acquisition, storage yards, and hypercar facilities. Click to inspect.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCROLLABLE WEEKLY PROGRESS LOGS -->
+    <section id="logs" class="content-section">
+        <h2 class="section-title">Weekly Progress Logs</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-date">Week 1</div>
+                <div class="timeline-body">
+                    <h4>Environment Architecture</h4>
+                    <p>Initialized GitHub repositories, structured project configurations, and established core design systems.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-date">Week 2</div>
+                <div class="timeline-body">
+                    <h4>SPA Prototyping</h4>
+                    <p>Engineered full-page scroll transitions and state-driven interactive tab selectors.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE DETAIL MODAL -->
+    <div id="info-modal" class="modal-overlay" onclick="closeModal()">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="closeModal()">&times;</button>
+            <h3 id="modal-title">Ecosystem Tier</h3>
+            <p id="modal-desc">Detailed tactical roadmap content goes here.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
